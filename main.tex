@@ -1,7 +1,8 @@
 % LaTeX template by Mairi MacLeod: https://github.com/supermairio
 % My basic LaTeX guide: https://supermairio.github.io/2020-06-09-latex-guide/
 
-\documentclass{article}
+\documentclass[9pt]{extarticle}
+
 
 \usepackage[utf8]{inputenc}
 \usepackage{acronym} %for acrodef
@@ -11,57 +12,28 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{float} %making sure pics go where you want them
-\usepackage[margin=1.25in]{geometry} %page margin size
+\usepackage[margin=1in]{geometry} %page margin size
 \usepackage{amssymb} %maths and currency symbols
 \usepackage{longtable} %tables
+\usepackage{mathptmx} %times new roman
 \usepackage{multicol} %if you want multiple columns
-\usepackage{minted} %for code 
-\usepackage{times} %for dissertation
+\usepackage{minted} %for code
 \usemintedstyle{perldoc} %I prefer this one but others are available at: https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
-
+\usepackage[document]{ragged2e}
 
 \pagestyle{fancy}
 \fancypagestyle{plain}{}
 \fancyhf{} %removes default header/footer
-\fancyfoot[l]{0000000} %student number 
-\fancyfoot[c]{Page \thepage}
-\fancyfoot[r]{00/00/0000} %the date
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.5em}
 \renewcommand{\headrulewidth}{1.5pt}
+\cfoot{1700231}
 
+%Title is in 1 because of formatting and I wanted everything to be on the same page
 \begin{document}
 {
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=12cm]{Images/abertaylogo.png}
-\end{figure}
-\bigskip
+\include{1}
 
-\centering{
-\thispagestyle{empty}
-\renewcommand{\baselinestretch}{1.1}
-\textbf{\LARGE{Title}}\medbreak
-\renewcommand{\baselinestretch}{1}
-\large{Name}\\
-\large{School of Design and Infomatics}\\ %Can replace with student number for non dissertation modules
-\large{BSc(Hons) Ethical Hacking}\\
-\large{\nth{00} Month 0000}
-}
-
-\begin{flushleft}
-\newpage
-\tableofcontents
-\include{0-Abstract}
-\include{1-Introduction}
-\include{2-Procedure}
-\include{3-Results}
-\include{4-Discussion}
-\include{5-References}
-\include{6-Acronyms}
-\include{7-Appendices}
-
-\end{flushleft}
 }
 
 \end{document}
