@@ -16,6 +16,7 @@
 \usepackage{longtable} %tables
 \usepackage{multicol} %if you want multiple columns
 \usepackage{minted} %for code 
+\usepackage{times} %for dissertation
 \usemintedstyle{perldoc} %I prefer this one but others are available at: https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
 
 
@@ -33,16 +34,19 @@
 {
 \begin{figure}[H]
     \centering
-    \includegraphics[width=2.75cm,height=3.5cm]{Images/abertay.png}
+    \includegraphics[width=12cm]{Images/abertaylogo.png}
 \end{figure}
+\bigskip
 
 \centering{
 \thispagestyle{empty}
-\textbf{\Huge{Title}\\
-\huge{Your Name: Student Number}}\\
-\LARGE{Module Number - Module Name}\\
-\LARGE{Course}\\
-\LARGE{Date}
+\renewcommand{\baselinestretch}{1.1}
+\textbf{\LARGE{Title}}\medbreak
+\renewcommand{\baselinestretch}{1}
+\large{Name}\\
+\large{School of Design and Infomatics}\\ %Can replace with student number for non dissertation modules
+\large{BSc(Hons) Ethical Hacking}\\
+\large{\nth{00} Month 0000}
 }
 
 \begin{flushleft}
