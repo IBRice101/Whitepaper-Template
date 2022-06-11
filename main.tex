@@ -1,5 +1,6 @@
 % LaTeX template by Mairi MacLeod: https://github.com/supermairio
 % My basic LaTeX guide: https://supermairio.github.io/2020-06-09-latex-guide/
+% Minor changes by Isaac Basque-Rice: https://github.com/IBRice101
 
 \documentclass{article}
 
@@ -19,6 +20,45 @@
 \usepackage{times} %for dissertation
 \usemintedstyle{perldoc} %I prefer this one but others are available at: https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
 
+\usepackage{outlines} % for ordered list
+\usepackage{titlesec} % for better headings
+
+\setcounter{secnumdepth}{4} % Set the depth to be whatever you need, 4 is usually the highest I go
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{listings} % for proper code formatting
+\usepackage{xcolor} % for colour
+
+% Use whatever colur cheme you like here, this is the Overleaf example one found at https://www.overleaf.com/learn/latex/Code_listing
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \pagestyle{fancy}
 \fancypagestyle{plain}{}
