@@ -4,26 +4,29 @@
 
 \subsection{Hello World in Python}
 
-\begin{lstlisting}[language=Python]
-print("Hello, World!")
-\end{lstlisting}
+% without line numbers
+\begin{minted}{python}
+print("Hello, World!") 
+\end{minted}
 
 \subsection{Hello World in Java}
 
-\begin{lstlisting}[language=Java]
+% with line numbers
+\begin{minted}[xleftmargin=20pt,linenos]{java}
 public class Main {
   public static void main(String[] args) {
     System.out.println("Hello, World!");
   }
 }
-\end{lstlisting}
+\end{minted}
 
-\subsection{Hello World in C++}
+\subsection{Test String in C++}
 
-\begin{lstlisting}[language=Java]
+% break line after a string goes over the line
+\begin{minted}[xleftmargin=20pt,linenos,breaklines,breakanywhere]{cpp}
 #include <iostream>
 
 int main() {
-  std::cout << "Hello, World!\n";
+  std::cout << "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et mollis orci. Nam sollicitudin, mauris non faucibus posuere, tellus magna suscipit tortor, sit amet commodo tortor augue ullamcorper velit. Praesent eget cursus augue. Donec congue fermentum vestibulum. Donec bibendum elit risus. Fusce eget auctor ex, sed tincidunt risus. Donec sit amet felis non nibh imperdiet tempor sit amet nec purus. Sed accumsan diam sit amet dolor mattis, eget finibus odio hendrerit. Pellentesque viverra fermentum ligula vel malesuada.\n";
 }
-\end{lstlisting}
+\end{minted}
